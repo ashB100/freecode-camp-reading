@@ -9,7 +9,7 @@
 
 #### Functions
 
-#### Scope
+#### Scopes
 
 #### Closure
 
