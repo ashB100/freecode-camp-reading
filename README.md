@@ -7,7 +7,11 @@
 
 #### 'strict' mode
 
-#### scope
+#### Functions
+
+#### Scope
+
+#### Closure
 
 #### Creating Objects
   Object Literals  
