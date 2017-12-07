@@ -13,6 +13,10 @@
 
 #### Closure
 
+#### Higher Order Functions
+
+#### Object and Array Data Types
+
 #### Creating Objects
   Object Literals  
   Constructor Functions  
