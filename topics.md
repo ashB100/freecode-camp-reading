@@ -56,6 +56,7 @@
 ## Web Development  
 
 * Project setup/build
+  * Linting
   * Grunt/Gulp/npm scripts/Webpack
   * CommonJs
   * Loaders and Bundlers
