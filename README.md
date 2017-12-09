@@ -1,50 +1,13 @@
 # freecodeCamp Reading
 
+This repositiory is created for:
+  * sharing useful learning resouces
+  * planning and prioritising topics to learn for web development
+  * collaborating ideas 
+  * anything else you may see the need for :) 
 
-## Topics to Cover
+* [Learning Topics](https://github.com/ashB100/freecode-camp-reading/blob/master/topics.md)
+* [Learning Resources](https://github.com/ashB100/freecode-camp-reading/blob/master/learning-resources.md)
 
-### JavaScript
 
-#### 'strict' mode
 
-#### Functions
-
-#### Scopes
-
-#### Closure
-
-#### Higher Order Functions
-
-#### Object and Array Data Types
-
-#### Creating Objects
-  Object Literals  
-  Constructor Functions  
-  Object.create()  
-  ES6 Classes  
-
-#### Creating Data Models using Objects 
- 
-#### Object Properties
- 
-#### Prototypes and Inheritance
- 
-#### this keyword 
- 
-#### Hoisting
- 
-#### Event Handling
-
-#### Functional Programming
-
-#### Namespacing
-
-#### Modules 
-
-#### Creational Design Patterns
-  Module Pattern  
-  Revealing Module Pattern  
-  Factory Pattern  
-  Singleton Pattern  
-  
- 
