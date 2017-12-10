@@ -6,8 +6,12 @@ This repositiory is created for:
   * collaborating ideas 
   * anything else you may see the need for :) 
 
-* [Learning Topics](https://github.com/ashB100/freecode-camp-reading/blob/master/topics.md)
-* [Learning Resources](https://github.com/ashB100/freecode-camp-reading/blob/master/learning-resources.md)
+   
+Please do a pull request to add your ideas.  
+
+[Learning Topics](https://github.com/ashB100/freecode-camp-reading/blob/master/topics.md)  
+  
+[Learning Resources](https://github.com/ashB100/freecode-camp-reading/blob/master/learning-resources.md)
 
 
 
