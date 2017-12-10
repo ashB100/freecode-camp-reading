@@ -31,3 +31,20 @@
 
 ## Frontend Web Development
 * https://frontendmasters.com/books/front-end-handbook/2017/
+
+
+## Frontend Playgrounds
+
+* https://stackblitz.com/
+* https://jsfiddle.net/
+* https://plnkr.co/
+* https://codepen.io/
+
+
+## Hosting
+
+* https://www.iomart.com/  
+
+
+## Encription
+* https://letsencrypt.org/
