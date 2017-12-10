@@ -30,8 +30,6 @@
  
 * Event Handling
 
-* Functional Programming
-
 * ES6 Plus
 
 * Namespacing
@@ -44,12 +42,15 @@
   * Factory Pattern  
   * Singleton Pattern  
   
+* Functional Programming
+
 ## CSS  
 
 ## HTML  
  * Semantic HTML
  * Using templates
   * E.g. Mustache
+ * Using a Library like React or JavaScript Framework like Angular
   
   https://frontendmasters.com/books/front-end-handbook/2017/learning/html-css.html
   
@@ -62,3 +63,6 @@
   * Loaders and Bundlers
 * Deployment
 * Git 
+* Developer tools
+* Testing
+* Accessibility 
