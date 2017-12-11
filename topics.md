@@ -1,4 +1,4 @@
-# Topics  
+# Topics to Practice at Meetups
 
 ## Javascript
 
@@ -41,8 +41,6 @@
   * Revealing Module Pattern  
   * Factory Pattern  
   * Singleton Pattern  
-  
-* Functional Programming
 
 ## CSS  
 
@@ -66,3 +64,12 @@
 * Developer tools
 * Testing
 * Accessibility 
+
+## Programming Paradigms
+
+* Functional Programming
+* Reactive Programming
+* Object Oriented Programmin
+* Imperative Programming
+
+
