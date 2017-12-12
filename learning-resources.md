@@ -3,7 +3,7 @@
 ## JavaScript
 
 ### Free online books
-#### Beginners
+#### Beginner
 * https://frontendmasters.com/books/front-end-handbook/2017/
 * http://jsforcats.com/
 * https://gitbookio.gitbooks.io/javascript/
@@ -19,11 +19,6 @@
 * http://chimera.labs.oreilly.com/books/1234000000262/index.html
 
 
-## Functional Programming
-
-* https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
-
-
 ## Useful JavaScript Libraries
 
 * https://facebook.github.io/immutable-js/
@@ -33,6 +28,8 @@
 
 ## CSS
 
+* [Understanding Flexbox: Everything you need to know](https://medium.freecodecamp.org/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af) <span>&#x2714;</span>
+
 ## HTML
 
 ## Angular
@@ -40,7 +37,7 @@
 
 ## Frontend Web Development
 * https://frontendmasters.com/books/front-end-handbook/2017/
-
+* https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 
 ## Frontend Playgrounds
 
@@ -61,17 +58,26 @@
 * https://letsencrypt.org/
 
 
-### Tutorials
+## Free Courses and Tutorials
+
+* https://www.udemy.com/topic/javascript/?price=price-free
 
 
-### Podcasts
+## Podcasts
 
 * http://freecodecamp.libsyn.com/
 
 
-### Videos
+## Videos
 
+* https://www.youtube.com/channel/UCVk8weS4S2kJfja72fTxh5A
 * https://www.youtube.com/watch?v=e-5obm1G_FY
+
+
+## Blogs and Articles
+
+* https://medium.freecodecamp.org/
+* https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 
 
 ## Awesome People to Follow
