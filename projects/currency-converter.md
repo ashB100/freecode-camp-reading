@@ -4,7 +4,7 @@ In this project we will build a currency converter similar to [this one provided
 
 In order to do currency conversion, we need exchange rates for the different countries. 
 
-We will use this static JSON for the rates.
+We will use this static JSON for the rates. This assumes GBP to be the base rate, 1.
 
 ```
   const RATES = {
@@ -44,6 +44,12 @@ We will use this static JSON for the rates.
 ```
   
 Once we start learning 'Promises' we can replace the static JSON with api call to get the current exchange rates.
+
+## Formula for currency conversion
+
+```
+  Converted Amount = Amount you want to convert / rateFrom * rateTo
+```
 
 ## User Stories
 
@@ -103,5 +109,16 @@ The function names should be descriptive of the the task.
   
 The information needed by the functions should be passed to them. 
 
+## Tips - for if you need some help getting started on how to tackle this app
 
-
+* In your index.html create the markup for:
+  * entering amount
+  * selecting currencyFrom
+  * selecting currencyTo
+  * displaying converted amount
+* Get the amountFrom, currencyFrom, currencyTo from the DOM. 
+* Lookup the ratesFrom, ratesTo for the entered currencies from the rates Object.
+  * E.g. ratesFrom = RATES[currencyFrom]
+* Pass the amount, rateFrom, rateTo, to a function that will do the conversion. 
+* The formula for conversion is: amountTo = amountFrom / rateFrom * rateTo.
+* Once you're ready for this, add events for amount, currencyFrom and currencyTo elements using addEventListener('input', eventHandlerFunction)
