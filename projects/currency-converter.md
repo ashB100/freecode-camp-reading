@@ -83,8 +83,11 @@ do rather than how to do it. We can do this by using functions.
     
     ...
    
-   rateFrom = RATES[currency_from];
-   rateTo = RATES[currency_to];
+    // Multiply the values of array by two and store in result
+    let results = []
+    for (let i = 0; i < arr.length; i++){
+      results.push(arr[i] * 2)
+    }
    ...
   })();
 ```
@@ -95,12 +98,11 @@ do rather than how to do it. We can do this by using functions.
 (function() {
   'use strict';
    
-   function getRate(currency) {
-    return RATES[currency];
+   function double (arr) {
+    return arr.map((item) => item * 2)
    }
    
-   rateFrom = getRate(currencyFrom);
-   rateTo = getRate(currencyTo);
+   let results = double(arr);
 })();
 ```
   
