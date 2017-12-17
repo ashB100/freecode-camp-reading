@@ -82,27 +82,26 @@ do rather than how to do it. We can do this by using functions.
     'use strict';
     
     ...
-   for(var i=0; i< i.length; i++) {
-    if (rate[i] === currencyFrom) {
-      rateFrom = rate[i];
-      break;
-    }
-   }
    
-   for(var i=0; i< i.length; i++) {
-    if (rate[i] === currencyTo) {
-      rateTo = rate[i];
-      break;
-    }
-   }
-  })()
+   rateFrom = RATES[currency_from];
+   rateTo = RATES[currency_to];
+   ...
+  })();
 ```
   
 **A declarative way would be:** 
   
 ```
-    rateFrom = getRateForCurrency(currencyFrom);
-    rateTo = getRateForCurrency(currencyTo);
+(function() {
+  'use strict';
+   
+   function getRate(currency) {
+    return RATES[currency];
+   }
+   
+   rateFrom = getRate(currencyFrom);
+   rateTo = getRate(currencyTo);
+})();
 ```
   
 The function names should be descriptive of the the task. 
