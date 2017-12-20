@@ -3,7 +3,7 @@
 * Store values in variables
 * String datatype 
 * Use a built-in string function
-* Create your own function
+* Create your own functions
 
 ## String Datatype
 **Strings** are letters, numbers and any other characters inside single quotes or double quotes.  
