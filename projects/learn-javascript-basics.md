@@ -1,17 +1,31 @@
-# Lesson 1. 
+# JavaScript Basics
 
+These lessons are based on [JavaScript For Cats](http://jsforcats.com/).
+
+## Workshop 1 
 * Store values in variables
 * String datatype 
 * Use a built-in string function
 * Create your own functions
 
-## String Datatype
+### String Datatype
 **Strings** are letters, numbers and any other characters inside single quotes or double quotes.  
 
 To store values, like ```1``` or ```true``` or ```"Hello"``` we use **variables**.  
 
-## Variables
-Variables are declared using ```var``` or ```let``` or ```const```. ```let``` and ```const``` were introduced in ES6.  
+### Variables
+Variables are declared using ```var``` or ```let``` or ```const``` keywords.  
+
+Variable declarations using ```var``` are treated as if they are at the top of the function. This is called **hoisting**.
+
+```var``` declarations outside functions are created in the global scope.
+
+```let``` and ```const``` were introduced in ES6.  
+
+
+You can basically replace ```var``` with ```let``` to declare a variable. The difference between ```var``` and ```let``` is that ```let``` limits the variable scope only to the current code block.
+
+
 
 Variables are assigned/given values by using either var/let/const keyword, followed by the name of the variable followed by ```=``` and then the value you want to assign.
 
