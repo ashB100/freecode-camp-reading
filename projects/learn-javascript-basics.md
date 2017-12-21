@@ -212,7 +212,22 @@ let sentence = 'I need a nap';
 yellIt(sentence);
 ```
 
-** Exercise 5: **
+**Exercise 5:**
+Write a function called isLonger which takes two parameters, str1, str2 and returns true if str1 is longer than str2.
+
+**Tips:**
+1. Use the ```length``` property of string to check the lengths of strings. 
+
+E.g. 
+```const str1Length = str1.length;```
+
+2. Use the ```>``` operator to comare the lengths.
+
+E.g.
+```return str1Length > str2Length;```
+
+
+**Exercise 6:**
 
 The following introduces uses Array datatype as well as String.
 
