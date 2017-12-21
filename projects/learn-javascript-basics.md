@@ -8,26 +8,96 @@ These lessons are based on [JavaScript For Cats](http://jsforcats.com/).
 * Use a built-in string function
 * Create your own functions
 
-### String Datatype
-**Strings** are letters, numbers and any other characters inside single quotes or double quotes.  
+### The String Datatype 
+**Strings** are letters, numbers and any other characters inside single quotes, e.g. ```'A String'``` or double quotes, e.g. ```"A String"```.  
 
-To store values, like ```1``` or ```true``` or ```"Hello"``` we use **variables**.  
 
 ### Variables
-Variables are declared using ```var``` or ```let``` or ```const``` keywords.  
+To store values, like ```1``` or ```true``` or ```"Hello"``` we use **variables**.  
 
-Variable declarations using ```var``` are treated as if they are at the top of the function. This is called **hoisting**.
-
-```var``` declarations outside functions are created in the global scope.
+### To Declare Variables
+Variables are declared using ```var```, ```let```, or ```const``` keywords.  
 
 ```let``` and ```const``` were introduced in ES6.  
 
+**Try in console:**
 
+```
+var sentence;
+```
+
+Sentence is declared but **not initialized**, its default value is **undefined**
+
+**Try in console:**
+
+```
+var sentence = "This is a string.";
+console.log(sentence);
+```
+Sentence is initialized, meaning it is declared and assigned a value. 
+
+#### var
+Variable declarations using ```var``` are treated as if they are at the top of the function. This is called **hoisting**.
+
+**Try in console**
+
+```
+function greet(name) {
+  console.log('name', name);
+  console.log('message', message);
+  
+  var message = "Hey there, ";
+  
+  console.log('message', message);
+  
+  return message + name;
+}
+```
+
+You are able to use the variable ```message``` in ```console.log(message)``` before it was declared without getting an error. The ``console.log(message)`` gives the value ```undefined```. This is because of **hoisting**. Before running your code, the compiler first goes through and looks for all the declarations. All variables declared with ```var``` keyword are assigned the value of ```undefined```. 
+
+So, the compiler treats your code more like this: 
+
+```
+function greet(name) {
+  var message = undefined;
+  
+  console.log('name', name);
+  console.log('message', message);
+  
+  message = "Hey there, ";
+  
+  console.log('message', message);
+  
+  return message + name;
+}
+```
+
+The compiler then goes through the code a second time and runs the code, meaning, it evaluates expressions and runs statements. A fragment of code that produces a value is called an expression.
+
+**Try in console**
+```1;```
+```!true;```
+```let value = 3 * 12;```
+```console.log(value);```
+
+
+```var``` declarations outside functions are created in the global scope.
+
+#### let
 You can basically replace ```var``` with ```let``` to declare a variable. The difference between ```var``` and ```let``` is that ```let``` limits the variable scope only to the current code block.
 
+A **block** 
+#### const
+Variables declared using ```const``` are **constants** meaning their values cannot be changed once set. For this reason ```const``` variables must be initialized on declaration, meaning, they must be assigned a value when they are declared.
 
+```
+const maxSize = 10;
+```
 
-Variables are assigned/given values by using either var/let/const keyword, followed by the name of the variable followed by ```=``` and then the value you want to assign.
+### To Assign Values to Variables
+
+Variables are assigned or given values using ```=```.
 
 e.g.
 ```
