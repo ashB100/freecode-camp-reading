@@ -87,7 +87,19 @@ The compiler then goes through the code a second time and runs the code, meaning
 #### let
 You can basically replace ```var``` with ```let``` to declare a variable. The difference between ```var``` and ```let``` is that ```let``` limits the variable scope only to the current code block.
 
-A **block** 
+A **block statement** is used to group zero or more statements. A block is created with a pair of curly brackets ```{}```.
+
+**Try in console**
+
+```
+let count = 10;
+{
+  let count = 0;
+  console.log('count from block', count);
+}
+console.log('count from outside block', count);
+```
+
 #### const
 Variables declared using ```const``` are **constants** meaning their values cannot be changed once set. For this reason ```const``` variables must be initialized on declaration, meaning, they must be assigned a value when they are declared.
 
