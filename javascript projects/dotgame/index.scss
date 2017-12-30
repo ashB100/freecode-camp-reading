@@ -1,0 +1,216 @@
+// ------------------------------------------------------- //
+// DOT GAME ---------------------------------------------- //
+// ------------------------------------------------------- //
+
+
+// VARIABLES AND HELPERS --------------------------------- //
+// ------------------------------------------------------- //
+
+// TYPOGRAPHY
+// don't do this in real life
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+$font-primary: 'Rubik', Helvetica, Arial, sans-serif;
+
+// COLOR SCHEME
+$app-background: #fafafa;
+$gameboard-background: #ffffff;
+$ui-border: #B0BEC5; // a slightly blue grey border for game UI elements
+$type-primary-color: #37474F;
+$winning: yellowgreen;
+
+// MISC
+$border-rounded: 100px; // creates a circle
+$border-rounded-rect: 40px; // create a rounded rectangle
+
+
+
+// ANIMATIONS -------------------------------------------- //
+// ------------------------------------------------------- //
+
+// DROP
+// A "drop" from top to bottom, used by dots to fall.
+@keyframes drop {
+  // Leaving the 0% value unset here means that the
+  // top value of the element this animation is called
+  // on will be its top value set by other styles
+  // or in our case by the JavaScript.
+  0% {  }
+  100% { top: 100%; }
+}
+
+// FLASH
+// Flash the text a color. Used when score is updated.
+@keyframes flash {
+  0% { color: $winning; }
+  100% { color: $type-primary-color; }
+}
+
+
+// RESET ------------------------------------------------- //
+// ------------------------------------------------------- //
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: 100%; // default browser size of 16px
+  background: $app-background;
+  color: $type-primary-color;
+}
+
+* { box-sizing: border-box; }
+
+
+
+
+// GAMEBOARD --------------------------------------------- //
+// ------------------------------------------------------- //
+// The game area, gameboard, & layout of playable elements.
+
+.game {
+  padding: 0 4em;
+}
+
+// GAMEBOARD
+.gameboard {
+  position: relative; // allow dots to be positioned absolutely against the gameboard area
+  width: 100%;
+  margin-top: 2em; // create space above the board for other playable elements
+  min-height: 500px; // set a minimum height to ensure the gameboard appears and is playable
+  overflow: hidden; // force dots to be not shown when outside of the playable area
+  background: $gameboard-background;
+  border: 1px solid $ui-border;
+}
+
+
+// DOTS! ------------------------------------------------- //
+// ------------------------------------------------------- //
+// A (clickable) dot that falls through the gameboard and
+// generates points for the user when clicked.
+
+.dot {
+  // Set the default position of a dot to be at the top
+  // of the gameboard. As dots are created, this top position
+  // will be reset by JavaScript to the negative of the
+  // size of the dot, to ensure that a dot does not start
+  // visible but falls down from the inside top of the gameboard.
+  position: absolute;
+  top: 0;
+  border-radius: $border-rounded; // make it a circle!
+  opacity: .8; // let the dot's bg color slightly overlap
+
+	// overflow: visible;
+  // &:focus {outline: none;}
+
+
+  // A dot falls from the top of the gameboard to the
+  // bottom, with this `drop` animation.
+  // The duration of the animation will be changed by
+  // the slider component of the game.
+  animation-name: drop;
+  // If we use ease-in, dots fall ever so slightly
+  // faster at the bottom of the gameboard,
+  // therefore slightly increasing the difficulty
+  // if you let dots get away from you.
+  // Tricky!
+  animation-timing-function: ease-in;
+}
+
+// TODO doesn't play since dot is removed
+// Set up a ring animation after the dot is clicked
+// .dot::after {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	margin: -35px 0 0 -35px; // should be variable
+// 	width: 120px; // should be variable
+// 	height: 120px; // should be variable
+// 	border-radius: 50%;
+// 	content: '';
+// 	opacity: 0;
+// 	pointer-events: none;
+// 	border: 2px solid rgba(0,0,0,0.5);
+// }
+
+
+// .dot.was-clicked::after {
+// 	animation: clickRings 0.3s ease-out forwards;
+// }
+
+
+// @keyframes clickRings {
+// 	0% {
+// 		opacity: 1;
+// 		-webkit-transform: scale3d(0.5, 0.5, 1);
+// 		transform: scale3d(0.5, 0.5, 1);
+// 	}
+// 	to {
+// 		opacity: 0;
+// 		-webkit-transform: scale3d(1.2, 1.2, 1);
+// 		transform: scale3d(1.2, 1.2, 1);
+// 	}
+// }
+
+
+
+// SLIDER ------------------------------------------------ //
+// ------------------------------------------------------- //
+// A slider component that allows a user to control the
+// rate at which dots fall.
+
+$slider-height: 10px;
+
+.slider {
+  position: relative; // allow the marker to be positioned against the slider-track
+}
+
+// TRACK
+// The track that the marker increments against.
+.slider-track {
+  height: $slider-height; // define the height of the slider track
+  border-radius: $border-rounded-rect;
+  background: $ui-border;
+}
+
+// MARKER
+// The marker should be positioned in the visual vertical center
+// against the track, and should always be twice the height of the track.
+// Note that the width of the marker has no relationship to the
+// height of the track; it could be 10px for a thin, tall rounded
+// rectangle shape, or wider for an oblong marker.
+// The marker's left-right position is defined in the JavaScript.
+.slider-marker {
+  position: absolute; // position absolutely against the track
+  top: -5px;
+  height: $slider-height*2;
+  width: 40px;
+  border-radius: $border-rounded-rect;
+  background: tomato;
+}
+
+// LEGEND
+// The legend of the slider. Displays the speed at which the
+// dots are falling, in pixels per second.
+// This element is inside the slider-marker, so it will
+// naturally be positioned with the slider.
+.slider-legend {
+  margin-top: -20px; // position the legend above the marker
+  color: $type-primary-color;
+  font-size: .8em;
+  text-align: center; // center against the width of the marker
+}
+
+// SCORE ------------------------------------------------- //
+// ------------------------------------------------------- //
+// The bit a player cares about.
+
+.score {
+  padding: 1em 0 2em;
+}
+
+.score-value {
+  font-weight: 600;
+  font-size: 2em;
+
+  &.is-updated {
+    animation: flash 600ms 1 ease-in-out;
+  }
+}

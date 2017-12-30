@@ -1,0 +1,25 @@
+{
+  "name": "js-learning",
+  "version": "1.0.0",
+  "description": "Exercises for learning JS fundamentals",
+  "repository": {
+    "type": "git",
+    "url": "git@code.corp.indeed.com:rebeccam/js-learning.git"
+  },
+  "author": "Rebecca Murphey <rebeccam@indeed.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@indeed/eslint-plugin-indeed": "^5.0.0",
+    "babel-eslint": "^7.2.3",
+    "css": "^2.2.1",
+    "eslint": "^4.7.2",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "scripts": {
+    "lint": "eslint exercises --cache --quiet",
+    "lint-fix": "eslint exercises --fix",
+    "lint-warn": "eslint exercises --cache"
+  }
+}
