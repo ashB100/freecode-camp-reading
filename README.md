@@ -4,7 +4,6 @@ This repositiory is created for:
   * sharing useful learning resouces
   * planning and prioritising topics to learn for web development
   * collaborating ideas 
-  * anything else you may see the need for :) 
 
    
 Please fork the repository and create a request to add your ideas.  
